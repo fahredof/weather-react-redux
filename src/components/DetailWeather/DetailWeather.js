@@ -1,23 +1,18 @@
 import React from "react"
 import "./DetailWeather.css"
 import { connect } from "react-redux";
-import Spinner from "../Spinner/Spinner"
+import Spinner from "../Spinner/Spinner";
+import Details from '../Details/Details';
 
 const DetailWeather = (props) => {
 
   const { mainCity } = props;
-  const { wind, overcast, pressure, humidity, coordinates} = mainCity;
+  const { wind } = mainCity;
 
   return(
     <div className="details">
     { wind ?
-      <div>
-        <p>{wind}</p>
-        <p>{overcast}</p>
-        <p>{pressure}</p>
-        <p>{humidity}</p>
-        <p>{coordinates}</p>
-      </div>
+      <Details mainCity={mainCity}/>
       : <Spinner/>
     }
     </div>

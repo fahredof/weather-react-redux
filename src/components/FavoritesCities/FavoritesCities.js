@@ -1,8 +1,9 @@
 import React, {useState} from "react";
-import "./FavoritesCities.css"
-import Spinner from "../Spinner/Spinner"
-import addButton from './svg/addButton.svg'
-import crossButton from './svg/crossButton.svg'
+import "./FavoritesCities.css";
+import Spinner from "../Spinner/Spinner";
+import addButton from './svg/addButton.svg';
+import crossButton from './svg/crossButton.svg';
+import Details from "../Details/Details";
 
 const FavoritesCities = ({id, cityData, getWeather, deleteCity}) => {
   const [inputText, setInputText] = useState('');
@@ -59,15 +60,10 @@ const FavoritesCities = ({id, cityData, getWeather, deleteCity}) => {
               <div className="image">
               <img src={image} alt=""/>
               </div>
-              <div className="wind">{wind}</div>
-              <div className="overcast">{overcast}</div>
-              <div className="pressure">{pressure}</div>
-              <div className="humidity">{humidity}</div>
-              <div className="coordinates">{coordinates}</div>
-              <div className="crossButton">
+              <Details className="dt" mainCity={cityData}/>
               <img src={crossButton} alt="" onClick={onClickDelete}/>
               </div>
-            </div>
+
             : <div id="list">
             <div className="wind">{error}</div>
             <div className="crossButton">

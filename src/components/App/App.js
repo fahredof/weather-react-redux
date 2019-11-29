@@ -34,7 +34,7 @@ const App = (props) => {
         let latCor = position.coords.latitude;
         let lonCor = position.coords.longitude;
         let data = parseData(await fetchByCoordinates(apiKey, latCor, lonCor));
-        fetchCurrentCity(data);
+        fetchMainCity(data);
     };
 
     const getWeather = () => {

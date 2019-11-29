@@ -4,13 +4,10 @@
   grid-template-areas:
   "ct tmp img img crossButton"
   "ct tmp img img crossButton"
-  "wind wind wind wind wind"
-  "overcast overcast overcast overcast overcast"
-  "pressure pressure pressure pressure pressure"
-  "humidity humidity humidity humidity humidity"
-  "coordinates coordinates coordinates coordinates coordinates";
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 0.25fr 0.25fr 0.25fr 0.25fr;
+  "det det det det det"
+  "det det det det det";
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 30px 30px 30px 30px 30px 30px;
 }
 
 .favCity {
@@ -52,24 +49,9 @@
   grid-area: img;
 }
 
-.wind {
-  grid-area: wind;
-}
-
-.overcast {
-  grid-area: overcast;
-}
-
-.pressure {
-  grid-area: pressure;
-}
-
-.humidity {
-  grid-area: humidity;
-}
-
-.coordinates {
-  grid-area: coordinates;
+.det {
+  grid-area: det;
+  font-size: 5px;
 }
 
 .crossButton {
