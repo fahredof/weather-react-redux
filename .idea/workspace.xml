@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="842599af-74aa-48eb-98d8-9917ecf13297" name="Default Changelist" comment="add redux" />
+    <list default="true" id="842599af-74aa-48eb-98d8-9917ecf13297" name="Default Changelist" comment="add new component" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +93,7 @@
       <updated>1574938414560</updated>
       <workItem from="1574938416105" duration="27717000" />
       <workItem from="1574989872502" duration="2966000" />
+      <workItem from="1574996692523" duration="272000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1574938616300</created>
@@ -101,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574938616300</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add new component">
+      <created>1574996740691</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574996740691</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,61 +120,44 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="init" />
     <MESSAGE value="add redux" />
-    <option name="LAST_COMMIT_MESSAGE" value="add redux" />
+    <MESSAGE value="add new component" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new component" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="559" y="176" key="#ESLint" timestamp="1574946552609">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state x="559" y="176" key="#ESLint/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" timestamp="1574946552609" />
-    <state x="698" y="264" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1574938730695">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state x="698" y="264" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" timestamp="1574938730695" />
-    <state x="537" y="26" key="CommitChangelistDialog2" timestamp="1574989435932">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state x="537" y="26" key="CommitChangelistDialog2/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" timestamp="1574989435932" />
-    <state width="1899" height="244" key="GridCell.Tab.0.bottom" timestamp="1574945937606">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1899" height="244" key="GridCell.Tab.0.bottom/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" timestamp="1574945937606" />
-    <state width="1899" height="244" key="GridCell.Tab.0.center" timestamp="1574945937605">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1899" height="244" key="GridCell.Tab.0.center/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" timestamp="1574945937605" />
-    <state width="1899" height="244" key="GridCell.Tab.0.left" timestamp="1574945937604">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1899" height="244" key="GridCell.Tab.0.left/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" timestamp="1574945937604" />
-    <state width="1899" height="244" key="GridCell.Tab.0.right" timestamp="1574945937605">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1899" height="244" key="GridCell.Tab.0.right/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" timestamp="1574945937605" />
-    <state x="848" y="132" key="SettingsEditor" timestamp="1574944661518">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state x="848" y="132" key="SettingsEditor/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" timestamp="1574944661518" />
-    <state x="560" y="232" key="Vcs.Push.Dialog.v2" timestamp="1574938647624">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state x="560" y="232" key="Vcs.Push.Dialog.v2/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" timestamp="1574938647624" />
-    <state x="624" y="242" width="670" height="675" key="run.anything.popup" timestamp="1574980522190">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state x="624" y="242" width="670" height="675" key="run.anything.popup/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" timestamp="1574980522190" />
-    <state x="624" y="238" width="670" height="676" key="search.everywhere.popup" timestamp="1574944791248">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state x="624" y="238" width="670" height="676" key="search.everywhere.popup/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" timestamp="1574944791248" />
+    <state x="559" y="176" key="#ESLint" />
+    <state x="559" y="176" key="#ESLint/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" />
+    <state x="698" y="264" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" />
+    <state x="698" y="264" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" />
+    <state x="537" y="26" key="CommitChangelistDialog2" />
+    <state x="537" y="26" key="CommitChangelistDialog2/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" />
+    <state width="1899" height="244" key="GridCell.Tab.0.bottom" />
+    <state width="1899" height="244" key="GridCell.Tab.0.bottom/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" />
+    <state width="1899" height="244" key="GridCell.Tab.0.center" />
+    <state width="1899" height="244" key="GridCell.Tab.0.center/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" />
+    <state width="1899" height="244" key="GridCell.Tab.0.left" />
+    <state width="1899" height="244" key="GridCell.Tab.0.left/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" />
+    <state width="1899" height="244" key="GridCell.Tab.0.right" />
+    <state width="1899" height="244" key="GridCell.Tab.0.right/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" />
+    <state x="848" y="132" key="SettingsEditor" />
+    <state x="848" y="132" key="SettingsEditor/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" />
+    <state x="560" y="232" key="Vcs.Push.Dialog.v2" />
+    <state x="560" y="232" key="Vcs.Push.Dialog.v2/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" />
+    <state x="624" y="242" width="670" height="675" key="run.anything.popup" />
+    <state x="624" y="242" width="670" height="675" key="run.anything.popup/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" />
+    <state x="624" y="238" width="670" height="676" key="search.everywhere.popup" />
+    <state x="624" y="238" width="670" height="676" key="search.everywhere.popup/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" />
   </component>
 </project>
