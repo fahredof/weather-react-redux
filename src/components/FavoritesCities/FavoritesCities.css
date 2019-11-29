@@ -6,7 +6,7 @@
   "ct tmp img img crossButton"
   "det det det det det"
   "det det det det det";
-  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px 50px;
   grid-template-rows: 30px 30px 30px 30px 30px 30px;
 }
 
@@ -49,9 +49,9 @@
   grid-area: img;
 }
 
-.det {
+.sp {
   grid-area: det;
-  font-size: 5px;
+  font-size: 1px;
 }
 
 .crossButton {

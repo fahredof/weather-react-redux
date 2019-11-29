@@ -22,15 +22,9 @@ const reducer = (state = initialState, action) => {
                 mainCity: {}
             };
 
-        case 'FETCH_CURRENT_CITY':
-            return {
-                ...state,
-                mainCity: action.payload
-            };
-
         case 'FETCH_FAVORITE_CITY':
             let cities = [...state.favoritesCities];
-            cities[action.cityId] = action.payload;
+            cities[action.cityId - 1] = action.payload;
             return {
                 ...state,
                 favoritesCities: cities

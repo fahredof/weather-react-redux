@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./FavoritesCities.css";
 import Spinner from "../Spinner/Spinner";
 import addButton from './svg/addButton.svg';
@@ -12,13 +12,13 @@ const FavoritesCities = ({id, cityData, getWeather, deleteCity}) => {
       city,
       temp,
       image,
-      wind,
-      overcast,
-      pressure,
-      humidity,
-      coordinates,
       error
   } = cityData ? cityData : {};
+
+  useEffect(() => {
+      if(cityData && JSON.stringify(cityData) !== '{}')
+          setCondition('List')
+  }, [cityData]);
 
   const onClickAddButton = () => {
     setCondition('Input');
@@ -35,7 +35,7 @@ const FavoritesCities = ({id, cityData, getWeather, deleteCity}) => {
   };
 
   const onClickDelete = () => {
-    deleteCity(id);
+    deleteCity(id - 1);
     setCondition(' ');
   };
 
@@ -60,7 +60,9 @@ const FavoritesCities = ({id, cityData, getWeather, deleteCity}) => {
               <div className="image">
               <img src={image} alt=""/>
               </div>
-              <Details className="dt" mainCity={cityData}/>
+              <div className="sp" >
+                  <Details mainCity={cityData}/>
+              </div>
               <img src={crossButton} alt="" onClick={onClickDelete}/>
               </div>
 

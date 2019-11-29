@@ -1,5 +1,3 @@
-//export const inc = () => ({ type: 'INC' });
-
 const fetchMainCity = (payload) => {
     return {
         type: 'FETCH_MAIN_CITY',
@@ -12,13 +10,6 @@ const cleanMainCity = () => {
         type: 'CLEAN_MAIN_CITY'
     };
 };
-
-/*const fetchCurrentCity = (payload) => {
-    return {
-        type: 'FETCH_CURRENT_CITY',
-        payload
-    };
-};*/
 
 const fetchFavoriteCity = (cityId, payload) => {
     return {

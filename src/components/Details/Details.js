@@ -7,14 +7,12 @@ const Details = (props) => {
   const { wind, overcast, pressure, humidity, coordinates} = mainCity;
 
   return (
-    <div className="details">
-      <div>
+    <div className="det">
         <p>{wind}</p>
         <p>{overcast}</p>
         <p>{pressure}</p>
         <p>{humidity}</p>
         <p>{coordinates}</p>
-      </div>
     </div>
   );
 };
