@@ -1,19 +1,19 @@
 const fetchMainCity = (payload) => {
     return {
-        type: 'FETCH_MAIN_CITY',
+        type: "FETCH_MAIN_CITY",
         payload
     };
 };
 
 const cleanMainCity = () => {
     return {
-        type: 'CLEAN_MAIN_CITY'
+        type: "CLEAN_MAIN_CITY"
     };
 };
 
 const fetchFavoriteCity = (cityId, payload) => {
     return {
-        type: 'FETCH_FAVORITE_CITY',
+        type: "FETCH_FAVORITE_CITY",
         cityId,
         payload
     };
@@ -21,18 +21,16 @@ const fetchFavoriteCity = (cityId, payload) => {
 
 const deleteFavoriteCity = (cityId) => {
     return {
-        type: 'DELETE_FAVORITE_CITY',
+        type: "DELETE_FAVORITE_CITY",
         cityId
     };
 };
 
 const cleanFavoriteCity = () => {
     return {
-        type: 'CLEAN_FAVORITE_CITY'
+        type: "CLEAN_FAVORITE_CITY"
     };
 };
-
-export const check = () => ({type: 'CHECK'});
 
 export {
     fetchMainCity,
@@ -40,4 +38,4 @@ export {
     fetchFavoriteCity,
     deleteFavoriteCity,
     cleanFavoriteCity
-}
+};

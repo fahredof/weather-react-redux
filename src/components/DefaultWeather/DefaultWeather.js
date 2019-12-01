@@ -1,29 +1,29 @@
 import React from "react";
 import "./DefaultWeather.css"
-import { connect } from "react-redux";
-import Spinner from "../Spinner/Spinner"
+import {connect} from "react-redux";
+import Spinner from "../Spinner"
 
 const DefaultWeather = (props) => {
-    const { mainCity } = props;
-    const { city, image, temp } = mainCity;
-  return(
-    <div className="def" id="def">
-        { city ?
-            <div className="default">
-                <p className="city">{city}</p>
-                <p className="temp">{temp}</p>
-                <div className="image">
-                    <img src={image} alt=""/>
+    const {mainCity} = props;
+    const {city, image, temp} = mainCity;
+    return (
+        <div className="def" id="def">
+            {city ?
+                <div className="default">
+                    <p className="city">{city}</p>
+                    <p className="temp">{temp}</p>
+                    <div className="image">
+                        <img src={image} alt=""/>
+                    </div>
                 </div>
-            </div>
 
-          : <Spinner/>
-        }
-    </div>
-  )
+                : <Spinner/>
+            }
+        </div>
+    )
 };
 
-const mapStateToProps = ({ mainCity }) => {
+const mapStateToProps = ({mainCity}) => {
     return {
         mainCity
     };

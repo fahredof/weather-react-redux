@@ -1,15 +1,3 @@
-#list {
-  width: 87%;
-  display: grid;
-  grid-template-areas:
-  "ct tmp img img crossButton"
-  "ct tmp img img crossButton"
-  "det det det det det"
-  "det det det det det";
-  grid-template-columns: 100px 100px 100px 50px;
-  grid-template-rows: 30px 30px 30px 30px 30px 30px;
-}
-
 .favCity {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 15%;
@@ -19,44 +7,15 @@
   align-items: center;
   justify-content: center;
 }
+
 #city1 {
   grid-area: fav1;
 }
+
 #city2 {
   grid-area: fav2;
 }
+
 #city3 {
   grid-area: fav3;
-}
-#addButton {
-  cursor: pointer;
-}
-
-.city {
-  grid-area: ct;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 30px;
-}
-
-.temp {
-  grid-area: tmp;
-  font-size: 30px;
-}
-
-.image {
-  grid-area: img;
-}
-
-.sp {
-  grid-area: det;
-  font-size: 1px;
-}
-
-.crossButton {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  grid-area: crossButton;
 }

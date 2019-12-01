@@ -11,7 +11,7 @@ function parseData(data) {
             coordinates: `Coordinates [${data.coord.lat}, ${data.coord.lon}]`
         });
     else
-        return({error: data.error});
+        return ({error: data.error});
 }
 
 export {
