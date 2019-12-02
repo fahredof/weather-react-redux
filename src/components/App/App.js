@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {connect} from "react-redux";
 import * as actions from "../../actions";
+//import {fetchByName } from "../../actions";
 
 import "./App.css";
 
@@ -20,25 +21,27 @@ const App = (props) => {
     const {
         apiKey, defaultWeather, favoritesCities,
         fetchMainCity, cleanMainCity,
-        fetchFavoriteCity, deleteFavoriteCity
+        fetchFavoriteCity, deleteFavoriteCity,
+        fetchByName
     } = props;
 
     //API functions
 
     const getDefaultWeather = async () => {
         let data = parseData(await fetchByCity(apiKey, defaultWeather));
-        fetchMainCity(data);
+        //fetchMainCity(data);
+        fetchByName(apiKey, defaultWeather);
     };
 
     const getWeatherByCoordinates = async (position) => {
         let latCor = position.coords.latitude;
         let lonCor = position.coords.longitude;
         let data = parseData(await fetchByCoordinates(apiKey, latCor, lonCor));
-        fetchMainCity(data);
+        //fetchMainCity(data);
     };
 
     const getWeather = () => {
-        cleanMainCity();
+        //cleanMainCity();
         getCoordinates(getWeatherByCoordinates, getDefaultWeather);
     };
 
@@ -46,11 +49,11 @@ const App = (props) => {
 
     const getWeatherByName = async (cityId, cityName) => {
         let data = parseData(await fetchByCity(apiKey, cityName));
-        fetchFavoriteCity(cityId, data);
+        //fetchFavoriteCity(cityId, data);
     };
 
     const deleteCity = (cityId) => {
-        deleteFavoriteCity(cityId);
+        //deleteFavoriteCity(cityId);
     };
 
     const getLocalState = () => {
@@ -106,5 +109,13 @@ const mapStateToProps = ({apiKey, defaultWeather, favoritesCities}) => {
         favoritesCities
     };
 };
+
+/*const mapDispatchToProps = dispatch => {
+    return {
+        fetchData: (apiKey, nameCity) => {
+            dispatch(fetchByName);
+        }
+    }
+};*/
 
 export default connect(mapStateToProps, actions)(App);

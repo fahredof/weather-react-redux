@@ -43,6 +43,9 @@ const reducer = (state = initialState, action) => {
                 favoritesCities: [{}, {}, {}]
             };
 
+        case "FETCH_BY_CITY_DATA":
+            return action.data;
+
         default:
             return state;
     }
