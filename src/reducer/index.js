@@ -8,17 +8,16 @@ const initialState = {
 const reducer = (state = initialState, action) => {
 
     switch (action.type) {
-
-        case "FETCH_MAIN_CITY":
+        case "WEATHER_FETCH_DATA_BY_NAME_SUCCESS":
             return {
                 ...state,
                 mainCity: action.payload
             };
 
-        case "CLEAN_MAIN_CITY":
+        case "WEATHER_FETCH_DATA_BY_COORDINATES_SUCCESS":
             return {
                 ...state,
-                mainCity: {}
+                mainCity: action.payload
             };
 
         case "FETCH_FAVORITE_CITY":
@@ -36,15 +35,6 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 favoritesCities: city
             };
-
-        case "CLEAN_FAVORITE_CITY":
-            return {
-                ...state,
-                favoritesCities: [{}, {}, {}]
-            };
-
-        case "FETCH_BY_CITY_DATA":
-            return action.data;
 
         default:
             return state;

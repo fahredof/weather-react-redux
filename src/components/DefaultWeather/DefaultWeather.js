@@ -6,6 +6,7 @@ import Spinner from "../Spinner"
 const DefaultWeather = (props) => {
     const {mainCity} = props;
     const {city, image, temp} = mainCity;
+
     return (
         <div className="def" id="def">
             {city ?

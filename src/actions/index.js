@@ -1,17 +1,37 @@
-const fetchMainCity = (payload) => {
+import { fetchByCity, fetchByCoordinates } from "../utils/fetchWeather";
+import { parseData} from "../utils/parseData";
+
+export const weatherFetchDataByNameSuccess = (payload) => {
     return {
-        type: "FETCH_MAIN_CITY",
+        type: "WEATHER_FETCH_DATA_BY_NAME_SUCCESS",
         payload
+    }
+};
+
+export const weatherFetchDataByName = (apiKey, cityName) => {
+    return async function (dispatch) {
+        fetchByCity(apiKey, cityName)
+            .then(data => parseData(data))
+            .then(response => dispatch(weatherFetchDataByNameSuccess(response)))
     };
 };
 
-const cleanMainCity = () => {
+export const weatherFetchDataByCoordinatesSuccess = (payload) => {
     return {
-        type: "CLEAN_MAIN_CITY"
+        type: "WEATHER_FETCH_DATA_BY_COORDINATES_SUCCESS",
+        payload
+    }
+};
+
+export const weatherFetchDataByCoordinates = (apiKey, latCor, lonCor) => {
+    return async function (dispatch) {
+        fetchByCoordinates(apiKey, latCor, lonCor)
+            .then(data => parseData(data))
+            .then(response => dispatch(weatherFetchDataByCoordinatesSuccess(response)))
     };
 };
 
-const fetchFavoriteCity = (cityId, payload) => {
+export const fetchFavoriteCitySuccess = (cityId, payload) => {
     return {
         type: "FETCH_FAVORITE_CITY",
         cityId,
@@ -19,62 +39,17 @@ const fetchFavoriteCity = (cityId, payload) => {
     };
 };
 
-const deleteFavoriteCity = (cityId) => {
+export const fetchFavoriteCity = (cityId, apiKey, cityName) => {
+    return async function (dispatch) {
+        fetchByCity(apiKey, cityName)
+            .then(data => parseData(data))
+            .then(response => dispatch(fetchFavoriteCitySuccess(cityId, response)))
+    };
+};
+
+export const deleteFavoriteCity = (cityId) => {
     return {
         type: "DELETE_FAVORITE_CITY",
         cityId
     };
-};
-
-const cleanFavoriteCity = () => {
-    return {
-        type: "CLEAN_FAVORITE_CITY"
-    };
-};
-
-export const fetchByNameSuccess = (data) => {
-    return {
-        type: "FETCH_BY_CITY_DATA",
-        data
-    };
-};
-
-/*export function fetchByName (apiKey, cityName) {
-    return (dispatch) => {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(response.statusText);
-                }
-                return response;
-            })
-            .then(response => response.json())
-            .then(data => dispatch(fetchByNameSuccess(data)))
-        }
-};*/
-
-export async function fetchByName(api_key, city) {
-    return async (dispatch) => {
-        const response =
-            await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`);
-        let dataByCity;
-        if (response.ok) {
-            dataByCity = await response.json();
-            console.log("jfjffjfjfjjfjfjfjfjf");
-        } else {
-            dataByCity = {error: "The server responded with a status of " + response.status}
-        }
-        dispatch(fetchByNameSuccess(dataByCity));
-    }
-
-}
-
-
-
-export {
-    fetchMainCity,
-    cleanMainCity,
-    fetchFavoriteCity,
-    deleteFavoriteCity,
-    cleanFavoriteCity
 };
